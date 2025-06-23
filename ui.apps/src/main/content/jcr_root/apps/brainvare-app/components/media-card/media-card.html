@@ -1,0 +1,29 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
+  <sly data-sly-call="${clientlib.all @ categories='brainvire.media'}"></sly>
+</sly>
+<h2 class="card__section-title" tabindex="0">${properties.sectionTitle}</h2>
+<div class="media-card-container">
+  <sly data-sly-test="${resource.hasChildren}" data-sly-list.outer="${resource.getChildren}">
+    <sly data-sly-test="${outer.hasChildren}" data-sly-list.card="${outer.getChildren}">
+      <div class="media-main-card">
+        <div data-type="${card.selectMedia}">
+          <sly data-sly-test="${card.selectMedia == 'image'}">
+            <img src="${card.mediaSrc}" alt="${card.mediaMetadata}" class="card-image" tabindex="0" />
+          </sly>
+          <sly data-sly-test="${card.selectMedia == 'video'}">
+            <video class="card-video" controls muted loop playsinline preload="metadata" poster="${card.videoPoster}">
+              <source src="${card.mediaSrc}" type="${card.mediaMetadata}" />
+            </video>
+            <div class="video-icon" tabindex="0">▶</div>
+          </sly>
+        </div>
+          <h3 class="card-title" tabindex="0">${card.title}</h3>
+          <p class="card-desc" tabindex="0">${card.description}</p>
+          <a href="${card.buttonLink}.html" target="${card.openNewTab == 'true' ? '_blank' : '_self'}"
+            rel="${card.openNewTab == 'true' ? 'noopener noreferrer' : ''}" class="card-btn">
+            ${card.buttonText}
+          </a>
+      </div>
+    </sly>
+  </sly>
+</div>
