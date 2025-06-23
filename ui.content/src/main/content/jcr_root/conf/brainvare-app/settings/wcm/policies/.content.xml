@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
     jcr:mixinTypes="[rep:AccessControllable]"
     jcr:primaryType="cq:Page">
     <rep:policy/>
@@ -332,22 +332,320 @@
             <page jcr:primaryType="nt:unstructured">
                 <policy
                     jcr:description="Includes the required client libraries."
+                    jcr:lastModified="{Date}2025-06-23T23:12:40.758+05:30"
+                    jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Generic Page"
                     sling:resourceType="wcm/core/components/policy/policy"
-                    clientlibs="[brainvare-app.dependencies,brainvare-app.site]"
+                    clientlibs="[brainvare-app.dependencies,brainvare-app.site,b.faq]"
+                    clientlibsAsync="false"
                     clientlibsJsHead="brainvare-app.dependencies">
                     <jcr:content jcr:primaryType="nt:unstructured"/>
                 </policy>
             </page>
+            <custom-container jcr:primaryType="nt:unstructured">
+                <policy_1750699584371
+                    jcr:lastModified="{Date}2025-06-23T22:56:56.311+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Custom Container"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    layoutDisabled="false">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0
+                            cq:styleGroupLabel="Container Background Colour"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="bg-dark-blue"
+                                    cq:styleId="1750664610076"
+                                    cq:styleLabel="Blue"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                    cq:styleClasses="bg-light-blue"
+                                    cq:styleId="1750664877736"
+                                    cq:styleLabel="Light Blue"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item2
+                                    cq:styleClasses="bg-grey"
+                                    cq:styleId="1750664922788"
+                                    cq:styleLabel="Grey"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item3
+                                    cq:styleClasses="bg-gradient-grey-white"
+                                    cq:styleId="1750664929085"
+                                    cq:styleLabel="White Gray"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item0>
+                        <item1
+                            cq:styleGroupLabel="Left Margin"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="margin-left-20"
+                                    cq:styleId="1750664980355"
+                                    cq:styleLabel="Margin Left 20 "
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                    cq:styleClasses="margin-left-60"
+                                    cq:styleId="1750665203905"
+                                    cq:styleLabel="Margin Left 60"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item2
+                                    cq:styleClasses="margin-left-90"
+                                    cq:styleId="1750665205528"
+                                    cq:styleLabel="Margin Left 90"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item3
+                                    cq:styleClasses="margin-left-120"
+                                    cq:styleId="1750665206759"
+                                    cq:styleLabel="Margin Left 120"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item4
+                                    cq:styleClasses="margin-left-140"
+                                    cq:styleId="1750665233426"
+                                    cq:styleLabel="Margin Left 140"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item1>
+                        <item2
+                            cq:styleGroupLabel="Right Margin"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="margin-right-20"
+                                    cq:styleId="1750665298575"
+                                    cq:styleLabel="Margin Right 20"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                    cq:styleClasses="margin-right-60"
+                                    cq:styleId="1750665302842"
+                                    cq:styleLabel="Margin Right 60"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item2
+                                    cq:styleClasses="margin-right-90"
+                                    cq:styleId="1750665304131"
+                                    cq:styleLabel="Margin Right 90"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item3
+                                    cq:styleClasses="margin-right-120"
+                                    cq:styleId="1750665307595"
+                                    cq:styleLabel="Margin Right 120"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item4
+                                    cq:styleClasses="margin-right-140"
+                                    cq:styleId="1750665309286"
+                                    cq:styleLabel="Margin Right 140"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item2>
+                        <item3
+                            cq:styleGroupLabel="Top Margin"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="margin-top-20"
+                                    cq:styleId="1750665489907"
+                                    cq:styleLabel="Top Margin 20"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                    cq:styleClasses="margin-top-60"
+                                    cq:styleId="1750665536710"
+                                    cq:styleLabel="Top Margin  60"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item2
+                                    cq:styleClasses="margin-top-90"
+                                    cq:styleId="1750665538613"
+                                    cq:styleLabel="Top Margin 90"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item3
+                                    cq:styleClasses="margin-top-120"
+                                    cq:styleId="1750665540158"
+                                    cq:styleLabel="Top Margin 120"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item4
+                                    cq:styleClasses="margin-top-140"
+                                    cq:styleId="1750665541761"
+                                    cq:styleLabel="Top Margin 140"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item3>
+                        <item4
+                            cq:styleGroupLabel="Margin Bottom "
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="margin-bottom-20 "
+                                    cq:styleId="1750665739619"
+                                    cq:styleLabel="Margin Bottom 20"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                    cq:styleClasses="margin-bottom-60"
+                                    cq:styleId="1750665742265"
+                                    cq:styleLabel="Margin Bottom 60"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item2
+                                    cq:styleClasses="margin-bottom-90 "
+                                    cq:styleId="1750665745178"
+                                    cq:styleLabel="Margin Bottom  90"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item3
+                                    cq:styleClasses="margin-bottom-120"
+                                    cq:styleId="1750665747094"
+                                    cq:styleLabel="Margin Bottom 120"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item4
+                                    cq:styleClasses="margin-bottom-140"
+                                    cq:styleId="1750665749605"
+                                    cq:styleLabel="Margin Botom 120"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item5
+                                    cq:styleId="1750665752280"
+                                    cq:styleLabel="Margin Botto 140m "
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item4>
+                        <item5
+                            cq:styleGroupLabel="Padding"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="padding-20"
+                                    cq:styleId="1750665862531"
+                                    cq:styleLabel="Padding 20"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                    cq:styleClasses="padding-40"
+                                    cq:styleId="1750665870758"
+                                    cq:styleLabel="Padding 40"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item2
+                                    cq:styleClasses="padding-120"
+                                    cq:styleId="1750665873290"
+                                    cq:styleLabel="Padding  120"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item3
+                                    cq:styleClasses="padding-140"
+                                    cq:styleId="1750665875116"
+                                    cq:styleLabel="Padding 140"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item5>
+                        <item6
+                            cq:styleGroupLabel="Padding Top"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="padding-top-20 "
+                                    cq:styleId="1750665970505"
+                                    cq:styleLabel="Padding Top 20"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                    cq:styleClasses="padding-top-40 "
+                                    cq:styleId="1750665973053"
+                                    cq:styleLabel="Padding Top 40"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item2
+                                    cq:styleClasses="padding-top-120 "
+                                    cq:styleId="1750665976038"
+                                    cq:styleLabel="Padding Top 120"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item3
+                                    cq:styleClasses="padding-top-140"
+                                    cq:styleId="1750665978178"
+                                    cq:styleLabel="Padding Top 140"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item6>
+                        <item7
+                            cq:styleGroupLabel="Right Padding  "
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="padding-right-20"
+                                    cq:styleId="1750666069049"
+                                    cq:styleLabel="Padding Right 20"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                    cq:styleClasses="padding-right-40"
+                                    cq:styleId="1750666072138"
+                                    cq:styleLabel="Padding Right 40"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item2
+                                    cq:styleClasses="padding-right-120"
+                                    cq:styleId="1750666074238"
+                                    cq:styleLabel="Padding Right 120"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item3
+                                    cq:styleClasses="padding-right-140"
+                                    cq:styleId="1750666076501"
+                                    cq:styleLabel="Padding Right 140"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item7>
+                        <item8
+                            cq:styleGroupLabel="Bottom Padding "
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="padding-bottom-20"
+                                    cq:styleId="1750666187273"
+                                    cq:styleLabel="Padding Bottom 20"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                    cq:styleClasses="padding-bottom-40"
+                                    cq:styleId="1750666201148"
+                                    cq:styleLabel="Padding Bottom 40"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item2
+                                    cq:styleClasses="padding-bottom-120"
+                                    cq:styleId="1750666212883"
+                                    cq:styleLabel="Padding Bottom 120"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item3
+                                    cq:styleClasses="padding-bottom-140"
+                                    cq:styleId="1750666215439"
+                                    cq:styleLabel="Padding Bottom 140"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item8>
+                        <item9
+                            cq:styleGroupLabel="Left Padding "
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="padding-left-20 "
+                                    cq:styleId="1750666291945"
+                                    cq:styleLabel="Padding Left 20"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                    cq:styleClasses="padding-left-40 "
+                                    cq:styleId="1750666298246"
+                                    cq:styleLabel="Padding Left 40"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item2
+                                    cq:styleClasses="padding-left-120 "
+                                    cq:styleId="1750666300555"
+                                    cq:styleLabel="Padding Left 120"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item3
+                                    cq:styleClasses="padding-left-140 "
+                                    cq:styleId="1750666303043"
+                                    cq:styleLabel="Padding Left 140"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item9>
+                    </cq:styleGroups>
+                </policy_1750699584371>
+            </custom-container>
         </components>
     </brainvare-app>
     <wcm jcr:primaryType="nt:unstructured">
         <foundation jcr:primaryType="nt:unstructured">
             <components jcr:primaryType="nt:unstructured">
-                <responsivegrid jcr:primaryType="nt:unstructured">
-            
-                </responsivegrid>
+                <responsivegrid jcr:primaryType="nt:unstructured"/>
             </components>
         </foundation>
     </wcm>
